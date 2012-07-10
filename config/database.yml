@@ -1,3 +1,4 @@
+
 # MySQL.  Versions 4.1 and 5.0 are recommended.
 # 
 # Install the MYSQL driver
@@ -22,21 +23,18 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  adapter: postgreesql
+  encoding: unicode
   database: agenda_test
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
+  socket: 
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
+  adapter: postgresql
+  encoding: unicode
   database: agenda_production
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
